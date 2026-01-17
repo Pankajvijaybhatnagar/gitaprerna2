@@ -13,11 +13,11 @@ export default function Button({
   ...props 
 }) {
   const variants = {
-    primary: 'bg-gradient-to-r from-[#72471c] to-[#a59069] text-white hover:shadow-xl',
-    secondary: 'bg-[#a59069] text-white hover:bg-[#72471c]',
-    outline: 'bg-white text-[#72471c] border-2 border-[#72471c] hover:bg-[#72471c] hover:text-white',
-    ghost: 'bg-transparent text-[#72471c] hover:bg-[#f5f1e8]',
-    danger: 'bg-red-600 text-white hover:bg-red-700',
+    primary: 'bg-gradient-to-r from-orange-600 via-orange-500 to-red-900 text-white hover:shadow-xl shadow-lg',
+    secondary: 'bg-orange-500 text-white hover:bg-red-900 shadow-md',
+    outline: 'bg-white text-orange-900 border-2 border-orange-600 hover:bg-orange-600 hover:text-white',
+    ghost: 'bg-transparent text-orange-900 hover:bg-orange-50',
+    danger: 'bg-red-900 text-white hover:bg-red-700 shadow-md',
   };
 
   return (

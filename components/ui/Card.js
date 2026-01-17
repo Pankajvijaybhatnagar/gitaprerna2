@@ -10,16 +10,17 @@ export default function Card({
   ...props 
 }) {
   const baseClasses = `
-    p-8 rounded-3xl border-2 border-[#a59069]/20
-    ${gradient ? 'bg-gradient-to-br from-[#f5f1e8] to-white' : 'bg-white'}
+    p-8 rounded-3xl border-2 border-orange-200
+    ${gradient ? 'bg-gradient-to-br from-orange-50 to-white' : 'bg-white'}
+    shadow-md
     ${className}
   `;
 
   const hoverProps = hoverable ? {
     whileHover: {
       scale: 1.02,
-      borderColor: '#72471c',
-      boxShadow: '0 20px 60px rgba(114, 71, 28, 0.15)',
+      borderColor: '#ea580c',
+      boxShadow: '0 20px 60px rgba(234, 88, 12, 0.2)',
     },
     transition: { duration: 0.3 }
   } : {};

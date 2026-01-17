@@ -16,12 +16,12 @@ export default function ChaptersPage() {
 
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#72471c] to-[#a59069]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-500 to-red-900" />
         <div className="absolute inset-0 om-pattern opacity-10" />
         
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <motion.div
-            className="text-7xl mb-6 text-[#d4a574]"
+            className="text-7xl mb-6 text-orange-100"
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.8 }}
@@ -39,7 +39,7 @@ export default function ChaptersPage() {
           </motion.h1>
           
           <motion.h2
-            className="text-3xl md:text-4xl mb-8 text-[#d4a574] font-light"
+            className="text-3xl md:text-4xl mb-8 text-orange-100 font-light"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -67,18 +67,18 @@ export default function ChaptersPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <BookOpen size={64} className="mx-auto mb-6 text-[#a59069]" />
-              <h3 className="text-3xl font-bold text-[#72471c] mb-4">
+              <BookOpen size={64} className="mx-auto mb-6 text-orange-400" />
+              <h3 className="text-3xl font-bold text-orange-900 mb-4">
                 No Chapters Available
               </h3>
-              <p className="text-xl text-[#a59069] mb-8">
+              <p className="text-xl text-orange-600 mb-8">
                 Please add chapters from the admin panel
               </p>
               <Link href="/admin">
                 <motion.button
-                  className="px-8 py-4 rounded-full text-lg font-semibold text-white"
+                  className="px-8 py-4 rounded-full text-lg font-semibold text-white shadow-lg"
                   style={{
-                    background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                    background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                   }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -98,18 +98,18 @@ export default function ChaptersPage() {
                 >
                   <Link href={`/chapter/${chapter.id}`}>
                     <motion.div
-                      className="bg-gradient-to-br from-[#f5f1e8] to-white p-8 rounded-3xl h-full cursor-pointer relative overflow-hidden border-2 border-[#a59069]/20"
+                      className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-3xl h-full cursor-pointer relative overflow-hidden border-2 border-orange-200 shadow-md"
                       whileHover={{
                         scale: 1.02,
-                        boxShadow: '0 20px 60px rgba(114, 71, 28, 0.15)',
-                        borderColor: '#72471c',
+                        boxShadow: '0 20px 60px rgba(234, 88, 12, 0.2)',
+                        borderColor: '#ea580c',
                       }}
                     >
                       {/* Chapter Number Badge */}
                       <motion.div
-                        className="absolute top-4 right-4 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white"
+                        className="absolute top-4 right-4 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg"
                         style={{
-                          background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                          background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                         }}
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
@@ -119,24 +119,24 @@ export default function ChaptersPage() {
 
                       {/* Content */}
                       <div className="pr-20 mb-6">
-                        <h3 className="text-2xl font-bold mb-3 text-[#72471c]">
+                        <h3 className="text-2xl font-bold mb-3 text-orange-900">
                           {chapter.titleHindi}
                         </h3>
-                        <h4 className="text-lg mb-4 text-[#a59069] font-medium">
+                        <h4 className="text-lg mb-4 text-orange-600 font-medium">
                           {chapter.titleEnglish}
                         </h4>
                       </div>
 
-                      <p className="text-sm mb-6 line-clamp-3 text-[#72471c]/70 leading-relaxed">
+                      <p className="text-sm mb-6 line-clamp-3 text-orange-900/70 leading-relaxed">
                         {chapter.summaryEnglish}
                       </p>
 
                       <div className="flex items-center justify-between">
-                        <div className="text-sm font-semibold text-[#a59069]">
+                        <div className="text-sm font-semibold text-orange-600">
                           {chapter.verses} श्लोक | Verses
                         </div>
                         <motion.div
-                          className="text-[#72471c]"
+                          className="text-orange-900"
                           whileHover={{ x: 5 }}
                         >
                           <ArrowRight size={24} />
@@ -145,7 +145,7 @@ export default function ChaptersPage() {
 
                       {/* Hover Effect Overlay */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-br from-[#72471c]/5 to-[#a59069]/5 opacity-0"
+                        className="absolute inset-0 bg-gradient-to-br from-orange-600/5 to-red-900/5 opacity-0"
                         whileHover={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}
                       />

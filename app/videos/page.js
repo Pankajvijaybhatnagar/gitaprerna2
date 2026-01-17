@@ -23,12 +23,12 @@ export default function VideosPage() {
 
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#72471c] to-[#a59069]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-500 to-red-900" />
         <div className="absolute inset-0 om-pattern opacity-10" />
         
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <motion.div
-            className="text-7xl mb-6 text-[#d4a574]"
+            className="text-7xl mb-6 text-orange-100"
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.8 }}
@@ -46,7 +46,7 @@ export default function VideosPage() {
           </motion.h1>
           
           <motion.h2
-            className="text-3xl md:text-4xl mb-8 text-[#d4a574] font-light"
+            className="text-3xl md:text-4xl mb-8 text-orange-100 font-light"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -74,11 +74,11 @@ export default function VideosPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <VideoIcon size={80} className="mx-auto mb-6 text-[#a59069]" />
-              <h3 className="text-3xl font-bold text-[#72471c] mb-4">
+              <VideoIcon size={80} className="mx-auto mb-6 text-orange-400" />
+              <h3 className="text-3xl font-bold text-orange-900 mb-4">
                 No Videos Yet
               </h3>
-              <p className="text-xl text-[#a59069]">
+              <p className="text-xl text-orange-600">
                 Spiritual videos will appear here once added
               </p>
             </motion.div>
@@ -90,13 +90,13 @@ export default function VideosPage() {
                 return (
                   <motion.div
                     key={video.id}
-                    className="bg-gradient-to-br from-[#f5f1e8] to-white rounded-3xl overflow-hidden border-2 border-[#a59069]/20 card-hover"
+                    className="bg-gradient-to-br from-orange-50 to-white rounded-3xl overflow-hidden border-2 border-orange-200 shadow-md hover:shadow-xl transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
                     {/* Video Embed */}
-                    <div className="relative aspect-video bg-[#72471c]">
+                    <div className="relative aspect-video bg-orange-900">
                       {videoId ? (
                         <iframe
                           src={`https://www.youtube.com/embed/${videoId}`}
@@ -117,11 +117,11 @@ export default function VideosPage() {
 
                     {/* Video Info */}
                     <div className="p-6">
-                      <h3 className="text-2xl font-bold text-[#72471c] mb-3">
+                      <h3 className="text-2xl font-bold text-orange-900 mb-3">
                         {video.title}
                       </h3>
                       {video.description && (
-                        <p className="text-[#a59069] leading-relaxed mb-4">
+                        <p className="text-orange-600 leading-relaxed mb-4">
                           {video.description}
                         </p>
                       )}
@@ -130,7 +130,7 @@ export default function VideosPage() {
                           href={video.youtubeUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-[#72471c] hover:text-[#a59069] font-semibold transition-colors"
+                          className="inline-flex items-center gap-2 text-orange-900 hover:text-red-900 font-semibold transition-colors"
                         >
                           <Play size={20} />
                           Watch on YouTube
@@ -146,7 +146,7 @@ export default function VideosPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#f5f1e8] to-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-orange-50 to-white">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -154,10 +154,10 @@ export default function VideosPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-[#72471c] mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent mb-6">
               Stay Connected
             </h2>
-            <p className="text-xl text-[#a59069] mb-12 leading-relaxed">
+            <p className="text-xl text-orange-600 mb-12 leading-relaxed">
               Subscribe to receive updates on new spiritual teachings and videos
             </p>
             <div className="text-6xl mb-8">🙏</div>

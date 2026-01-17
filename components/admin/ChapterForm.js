@@ -112,23 +112,23 @@ export default function ChapterForm({ chapter, onClose }) {
     >
       <div className="min-h-screen px-6 py-12 flex items-center justify-center">
         <motion.div
-          className="bg-white rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          className="bg-white rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-[#72471c]">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">
               {chapter ? 'Edit Chapter' : 'Add New Chapter'}
             </h2>
             <motion.button
               onClick={onClose}
-              className="p-2 rounded-full hover:bg-[#f5f1e8]"
+              className="p-2 rounded-full hover:bg-orange-50"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <X size={24} className="text-[#72471c]" />
+              <X size={24} className="text-orange-900" />
             </motion.button>
           </div>
 
@@ -137,7 +137,7 @@ export default function ChapterForm({ chapter, onClose }) {
             {/* Title Section */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                <label className="block text-sm font-semibold text-orange-900 mb-2">
                   Title in Hindi *
                 </label>
                 <input
@@ -145,7 +145,7 @@ export default function ChapterForm({ chapter, onClose }) {
                   name="titleHindi"
                   value={formData.titleHindi}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.titleHindi ? 'border-red-500' : 'border-[#a59069]/30'} focus:border-[#72471c] outline-none transition-colors`}
+                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.titleHindi ? 'border-red-500' : 'border-orange-300'} focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all`}
                   placeholder="अध्याय शीर्षक"
                 />
                 {errors.titleHindi && (
@@ -154,7 +154,7 @@ export default function ChapterForm({ chapter, onClose }) {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                <label className="block text-sm font-semibold text-orange-900 mb-2">
                   Title in English *
                 </label>
                 <input
@@ -162,7 +162,7 @@ export default function ChapterForm({ chapter, onClose }) {
                   name="titleEnglish"
                   value={formData.titleEnglish}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.titleEnglish ? 'border-red-500' : 'border-[#a59069]/30'} focus:border-[#72471c] outline-none transition-colors`}
+                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.titleEnglish ? 'border-red-500' : 'border-orange-300'} focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all`}
                   placeholder="Chapter Title"
                 />
                 {errors.titleEnglish && (
@@ -173,7 +173,7 @@ export default function ChapterForm({ chapter, onClose }) {
 
             {/* Verses */}
             <div>
-              <label className="block text-sm font-semibold text-[#72471c] mb-2">
+              <label className="block text-sm font-semibold text-orange-900 mb-2">
                 Number of Verses *
               </label>
               <input
@@ -181,7 +181,7 @@ export default function ChapterForm({ chapter, onClose }) {
                 name="verses"
                 value={formData.verses}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 rounded-xl border-2 ${errors.verses ? 'border-red-500' : 'border-[#a59069]/30'} focus:border-[#72471c] outline-none transition-colors`}
+                className={`w-full px-4 py-3 rounded-xl border-2 ${errors.verses ? 'border-red-500' : 'border-orange-300'} focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all`}
                 placeholder="47"
                 min="1"
               />
@@ -193,7 +193,7 @@ export default function ChapterForm({ chapter, onClose }) {
             {/* Summary Section */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                <label className="block text-sm font-semibold text-orange-900 mb-2">
                   Summary in Hindi *
                 </label>
                 <textarea
@@ -201,7 +201,7 @@ export default function ChapterForm({ chapter, onClose }) {
                   value={formData.summaryHindi}
                   onChange={handleChange}
                   rows="4"
-                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.summaryHindi ? 'border-red-500' : 'border-[#a59069]/30'} focus:border-[#72471c] outline-none transition-colors resize-none`}
+                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.summaryHindi ? 'border-red-500' : 'border-orange-300'} focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none`}
                   placeholder="सारांश हिंदी में..."
                 />
                 {errors.summaryHindi && (
@@ -210,7 +210,7 @@ export default function ChapterForm({ chapter, onClose }) {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                <label className="block text-sm font-semibold text-orange-900 mb-2">
                   Summary in English *
                 </label>
                 <textarea
@@ -218,7 +218,7 @@ export default function ChapterForm({ chapter, onClose }) {
                   value={formData.summaryEnglish}
                   onChange={handleChange}
                   rows="4"
-                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.summaryEnglish ? 'border-red-500' : 'border-[#a59069]/30'} focus:border-[#72471c] outline-none transition-colors resize-none`}
+                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.summaryEnglish ? 'border-red-500' : 'border-orange-300'} focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none`}
                   placeholder="Summary in English..."
                 />
                 {errors.summaryEnglish && (
@@ -231,13 +231,13 @@ export default function ChapterForm({ chapter, onClose }) {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="block text-sm font-semibold text-[#72471c]">
+                  <label className="block text-sm font-semibold text-orange-900">
                     Key Teachings in Hindi
                   </label>
                   <motion.button
                     type="button"
                     onClick={() => addArrayItem('keyTeachingsHindi')}
-                    className="text-sm text-[#72471c] hover:text-[#a59069]"
+                    className="text-sm text-orange-900 hover:text-red-900 font-semibold"
                     whileHover={{ scale: 1.05 }}
                   >
                     + Add
@@ -250,14 +250,14 @@ export default function ChapterForm({ chapter, onClose }) {
                         type="text"
                         value={teaching}
                         onChange={(e) => handleArrayChange('keyTeachingsHindi', index, e.target.value)}
-                        className="flex-1 px-4 py-2 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none transition-colors"
+                        className="flex-1 px-4 py-2 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
                         placeholder={`शिक्षा ${index + 1}`}
                       />
                       {formData.keyTeachingsHindi.length > 1 && (
                         <motion.button
                           type="button"
                           onClick={() => removeArrayItem('keyTeachingsHindi', index)}
-                          className="px-3 py-2 rounded-xl bg-red-100 text-red-600 hover:bg-red-200"
+                          className="px-3 py-2 rounded-xl bg-red-100 text-red-900 hover:bg-red-200"
                           whileHover={{ scale: 1.05 }}
                         >
                           ×
@@ -270,13 +270,13 @@ export default function ChapterForm({ chapter, onClose }) {
 
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="block text-sm font-semibold text-[#72471c]">
+                  <label className="block text-sm font-semibold text-orange-900">
                     Key Teachings in English
                   </label>
                   <motion.button
                     type="button"
                     onClick={() => addArrayItem('keyTeachingsEnglish')}
-                    className="text-sm text-[#72471c] hover:text-[#a59069]"
+                    className="text-sm text-orange-900 hover:text-red-900 font-semibold"
                     whileHover={{ scale: 1.05 }}
                   >
                     + Add
@@ -289,14 +289,14 @@ export default function ChapterForm({ chapter, onClose }) {
                         type="text"
                         value={teaching}
                         onChange={(e) => handleArrayChange('keyTeachingsEnglish', index, e.target.value)}
-                        className="flex-1 px-4 py-2 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none transition-colors"
+                        className="flex-1 px-4 py-2 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
                         placeholder={`Teaching ${index + 1}`}
                       />
                       {formData.keyTeachingsEnglish.length > 1 && (
                         <motion.button
                           type="button"
                           onClick={() => removeArrayItem('keyTeachingsEnglish', index)}
-                          className="px-3 py-2 rounded-xl bg-red-100 text-red-600 hover:bg-red-200"
+                          className="px-3 py-2 rounded-xl bg-red-100 text-red-900 hover:bg-red-200"
                           whileHover={{ scale: 1.05 }}
                         >
                           ×
@@ -311,7 +311,7 @@ export default function ChapterForm({ chapter, onClose }) {
             {/* Detailed Explanation Section */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                <label className="block text-sm font-semibold text-orange-900 mb-2">
                   Detailed Explanation in Hindi
                 </label>
                 <textarea
@@ -319,13 +319,13 @@ export default function ChapterForm({ chapter, onClose }) {
                   value={formData.detailedExplanationHindi}
                   onChange={handleChange}
                   rows="6"
-                  className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none"
                   placeholder="विस्तृत व्याख्या हिंदी में..."
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                <label className="block text-sm font-semibold text-orange-900 mb-2">
                   Detailed Explanation in English
                 </label>
                 <textarea
@@ -333,7 +333,7 @@ export default function ChapterForm({ chapter, onClose }) {
                   value={formData.detailedExplanationEnglish}
                   onChange={handleChange}
                   rows="6"
-                  className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none"
                   placeholder="Detailed explanation in English..."
                 />
               </div>
@@ -344,7 +344,7 @@ export default function ChapterForm({ chapter, onClose }) {
               <motion.button
                 type="button"
                 onClick={onClose}
-                className="px-6 py-3 rounded-full font-semibold text-[#72471c] bg-white border-2 border-[#72471c]"
+                className="px-6 py-3 rounded-full font-semibold text-orange-900 bg-white border-2 border-orange-600"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -353,9 +353,9 @@ export default function ChapterForm({ chapter, onClose }) {
               
               <motion.button
                 type="submit"
-                className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2"
+                className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2 shadow-lg"
                 style={{
-                  background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                  background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

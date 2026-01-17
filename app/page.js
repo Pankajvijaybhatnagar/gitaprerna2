@@ -48,7 +48,7 @@ export default function HomePage() {
       translation: "Whenever there is decline of righteousness, O Bharata...",
       description: "Arjuna's moral dilemma on the battlefield of Kurukshetra, questioning the righteousness of war against his own kinsmen.",
       theme: "Confusion and despair",
-      color: "#8B4513"
+      color: "#FF6B35"
     },
     {
       number: 2,
@@ -60,7 +60,7 @@ export default function HomePage() {
       translation: "You have the right to work only, but never to its fruits...",
       description: "Krishna teaches Arjuna about the eternal soul, the nature of reality, and the path of selfless action.",
       theme: "Knowledge of the self",
-      color: "#CD853F"
+      color: "#F7931E"
     },
     {
       number: 3,
@@ -72,7 +72,7 @@ export default function HomePage() {
       translation: "Better is one's own duty, though imperfect...",
       description: "The importance of performing one's duty without attachment to results and the concept of selfless service.",
       theme: "Path of selfless action",
-      color: "#D2691E"
+      color: "#DC2626"
     },
     {
       number: 4,
@@ -84,7 +84,7 @@ export default function HomePage() {
       translation: "Whenever righteousness declines and unrighteousness rises...",
       description: "Divine incarnations, the significance of sacrifice, and the relationship between knowledge and action.",
       theme: "Divine manifestation",
-      color: "#B8860B"
+      color: "#ea580c"
     },
     {
       number: 5,
@@ -96,7 +96,7 @@ export default function HomePage() {
       translation: "One who is purified, master of self and senses...",
       description: "The path of renunciation and the yoga of action, explaining their complementary nature.",
       theme: "Renunciation through action",
-      color: "#DAA520"
+      color: "#fb923c"
     },
     {
       number: 6,
@@ -108,7 +108,7 @@ export default function HomePage() {
       translation: "Among all yogis, one who meditates on Me...",
       description: "The practice of meditation, controlling the mind, and achieving inner peace and self-realization.",
       theme: "Meditation and mind control",
-      color: "#BDB76B"
+      color: "#f97316"
     },
     {
       number: 7,
@@ -120,7 +120,7 @@ export default function HomePage() {
       translation: "Among thousands of people, hardly one strives for perfection...",
       description: "The distinction between material and spiritual knowledge, and the nature of the Supreme.",
       theme: "Divine knowledge",
-      color: "#F0E68C"
+      color: "#FF6B35"
     },
     {
       number: 8,
@@ -132,7 +132,7 @@ export default function HomePage() {
       translation: "Uttering the sacred syllable Om, meditating on Me...",
       description: "The imperishable Brahman, the supreme destination, and the moment of death's significance.",
       theme: "Path to the Supreme",
-      color: "#EEE8AA"
+      color: "#F7931E"
     },
     {
       number: 9,
@@ -144,7 +144,7 @@ export default function HomePage() {
       translation: "Fix your mind on Me, be devoted to Me...",
       description: "The most confidential knowledge about devotion and God's immanence in all creation.",
       theme: "Supreme secret",
-      color: "#FAFAD2"
+      color: "#DC2626"
     },
     {
       number: 10,
@@ -156,7 +156,7 @@ export default function HomePage() {
       translation: "Whatever is glorious, prosperous, or powerful...",
       description: "The divine manifestations and glories of the Supreme in the material world.",
       theme: "Divine manifestations",
-      color: "#FFE4B5"
+      color: "#ea580c"
     },
     {
       number: 11,
@@ -168,7 +168,7 @@ export default function HomePage() {
       translation: "I am Time, the great destroyer of worlds...",
       description: "Krishna reveals His universal form to Arjuna, displaying the entire cosmos within Him.",
       theme: "Cosmic vision",
-      color: "#FFDEAD"
+      color: "#fb923c"
     },
     {
       number: 12,
@@ -180,7 +180,7 @@ export default function HomePage() {
       translation: "Those who follow this immortal dharma with faith...",
       description: "The path of devotion and love towards God as the highest form of yoga.",
       theme: "Path of devotion",
-      color: "#F5DEB3"
+      color: "#f97316"
     },
     {
       number: 13,
@@ -192,7 +192,7 @@ export default function HomePage() {
       translation: "Know that both nature and the soul are beginningless...",
       description: "The distinction between the body (field) and the soul (knower of the field).",
       theme: "Matter and spirit",
-      color: "#DEB887"
+      color: "#FF6B35"
     },
     {
       number: 14,
@@ -204,7 +204,7 @@ export default function HomePage() {
       translation: "Goodness, passion, and ignorance - these qualities born of nature...",
       description: "The three modes of material nature (gunas) and their influence on living beings.",
       theme: "Three modes of nature",
-      color: "#D2B48C"
+      color: "#F7931E"
     },
     {
       number: 15,
@@ -216,7 +216,7 @@ export default function HomePage() {
       translation: "One who knows Me as the Supreme Person...",
       description: "The Supreme Person who transcends both the perishable and imperishable.",
       theme: "Supreme being",
-      color: "#BC8F8F"
+      color: "#DC2626"
     },
     {
       number: 16,
@@ -228,7 +228,7 @@ export default function HomePage() {
       translation: "Fearlessness, purity of heart, steadfastness in knowledge...",
       description: "The divine and demonic qualities in human beings and their consequences.",
       theme: "Divine vs demonic traits",
-      color: "#A0522D"
+      color: "#ea580c"
     },
     {
       number: 17,
@@ -240,7 +240,7 @@ export default function HomePage() {
       translation: "Om Tat Sat - these are the three designations of Brahman...",
       description: "The three types of faith corresponding to the three gunas and their expressions.",
       theme: "Types of faith",
-      color: "#8B7355"
+      color: "#fb923c"
     },
     {
       number: 18,
@@ -252,7 +252,7 @@ export default function HomePage() {
       translation: "Abandon all varieties of dharmas and surrender unto Me alone...",
       description: "The culmination of all teachings, the path to final liberation, and complete surrender.",
       theme: "Ultimate liberation",
-      color: "#72471c"
+      color: "#f97316"
     }
   ];
 
@@ -284,11 +284,11 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden om-pattern">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f5f1e8] via-white to-[#f5f1e8]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-red-50" />
         
         {/* Floating Elements */}
         <motion.div
-          className="absolute top-20 left-10 text-8xl opacity-10 text-[#72471c]"
+          className="absolute top-20 left-10 text-8xl opacity-10 text-orange-600"
           animate={{
             y: [0, -30, 0],
             rotate: [0, 5, 0]
@@ -302,7 +302,7 @@ export default function HomePage() {
           ॐ
         </motion.div>
         <motion.div
-          className="absolute bottom-20 right-10 text-8xl opacity-10 text-[#a59069]"
+          className="absolute bottom-20 right-10 text-8xl opacity-10 text-red-900"
           animate={{
             y: [0, 30, 0],
             rotate: [0, -5, 0]
@@ -333,7 +333,7 @@ export default function HomePage() {
 
           {/* Main Heading */}
           <motion.h1
-            className="text-6xl md:text-8xl font-bold mb-6 text-[#72471c]"
+            className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -342,7 +342,7 @@ export default function HomePage() {
           </motion.h1>
 
           <motion.h2
-            className="text-3xl md:text-5xl mb-8 text-[#a59069] font-light"
+            className="text-3xl md:text-5xl mb-8 text-orange-600 font-light"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -351,7 +351,7 @@ export default function HomePage() {
           </motion.h2>
 
           <motion.p
-            className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-[#72471c]/80 leading-relaxed"
+            className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-orange-800/80 leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
@@ -371,11 +371,11 @@ export default function HomePage() {
               <motion.button
                 className="px-10 py-4 rounded-full text-xl font-semibold text-white shadow-2xl"
                 style={{
-                  background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                  background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                 }}
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: '0 20px 60px rgba(114, 71, 28, 0.4)',
+                  boxShadow: '0 20px 60px rgba(234, 88, 12, 0.4)',
                 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -385,10 +385,10 @@ export default function HomePage() {
 
             <Link href="/admin">
               <motion.button
-                className="px-10 py-4 rounded-full text-xl font-semibold text-[#72471c] bg-white border-2 border-[#72471c]"
+                className="px-10 py-4 rounded-full text-xl font-semibold text-orange-900 bg-white border-2 border-orange-600"
                 whileHover={{
                   scale: 1.05,
-                  backgroundColor: '#72471c',
+                  backgroundColor: '#ea580c',
                   color: 'white',
                 }}
                 whileTap={{ scale: 0.95 }}
@@ -410,9 +410,9 @@ export default function HomePage() {
               ease: "easeInOut"
             }}
           >
-            <div className="w-6 h-10 border-2 border-[#72471c] rounded-full flex items-start justify-center p-2">
+            <div className="w-6 h-10 border-2 border-orange-600 rounded-full flex items-start justify-center p-2">
               <motion.div
-                className="w-1.5 h-1.5 bg-[#72471c] rounded-full"
+                className="w-1.5 h-1.5 bg-orange-600 rounded-full"
                 animate={{
                   y: [0, 16, 0]
                 }}
@@ -437,38 +437,38 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-[#72471c] mb-4">
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent mb-4">
               विशेषताएं
             </h2>
-            <p className="text-2xl text-[#a59069]">Features</p>
+            <p className="text-2xl text-orange-600">Features</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-[#f5f1e8] to-white p-8 rounded-3xl border-2 border-[#a59069]/20 card-hover cursor-pointer"
+                className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-3xl border-2 border-orange-200 card-hover cursor-pointer shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{
-                  borderColor: '#72471c',
+                  borderColor: '#ea580c',
                 }}
               >
                 <motion.div
-                  className="text-[#72471c] mb-6"
+                  className="text-orange-600 mb-6"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
                   {feature.icon}
                 </motion.div>
-                <h3 className="text-2xl font-bold text-[#72471c] mb-2">
+                <h3 className="text-2xl font-bold text-orange-900 mb-2">
                   {feature.titleHindi}
                 </h3>
-                <h4 className="text-lg text-[#a59069] mb-3 font-semibold">
+                <h4 className="text-lg text-orange-600 mb-3 font-semibold">
                   {feature.titleEnglish}
                 </h4>
-                <p className="text-[#72471c]/70 leading-relaxed">
+                <p className="text-orange-900/70 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -478,7 +478,7 @@ export default function HomePage() {
       </section>
 
       {/* 18 Chapters Showcase Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-[#f5f1e8] via-white to-[#f5f1e8]">
+      <section className="py-24 px-6 bg-gradient-to-br from-orange-50 via-white to-red-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -488,21 +488,21 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center gap-4 mb-6">
-              <Scroll className="text-[#72471c]" size={48} />
-              <h2 className="text-5xl md:text-6xl font-bold text-[#72471c]">
+              <Scroll className="text-orange-600" size={48} />
+              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">
                 18 अध्याय
               </h2>
-              <Scroll className="text-[#72471c]" size={48} />
+              <Scroll className="text-orange-600" size={48} />
             </div>
-            <p className="text-2xl text-[#a59069] mb-4">18 Chapters of Divine Wisdom</p>
-            <p className="text-lg text-[#72471c]/70 max-w-3xl mx-auto">
+            <p className="text-2xl text-orange-600 mb-4">18 Chapters of Divine Wisdom</p>
+            <p className="text-lg text-orange-900/70 max-w-3xl mx-auto">
               Explore the complete journey of spiritual enlightenment through all eighteen chapters of the Bhagavad Gita
             </p>
           </motion.div>
 
           {/* Chapter Display with Grid Navigation */}
           <motion.div
-            className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-[#a59069]/20"
+            className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-orange-200"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -511,7 +511,7 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-[1.5fr,1fr] gap-0">
               {/* Left Side - Chapter Content */}
               <motion.div
-                className="p-8 md:p-12 bg-gradient-to-br from-[#f5f1e8] to-white"
+                className="p-8 md:p-12 bg-gradient-to-br from-orange-50 to-white"
                 key={selectedChapter}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -530,18 +530,18 @@ export default function HomePage() {
                       {selectedChapter}
                     </motion.div>
                     <div className="flex-1">
-                      <h3 className="text-3xl md:text-4xl font-bold text-[#72471c] mb-1">
+                      <h3 className="text-3xl md:text-4xl font-bold text-orange-900 mb-1">
                         {chapters[selectedChapter - 1].nameHindi}
                       </h3>
-                      <p className="text-xl text-[#a59069] font-semibold">
+                      <p className="text-xl text-orange-600 font-semibold">
                         {chapters[selectedChapter - 1].nameEnglish}
                       </p>
                     </div>
                   </div>
-                  <p className="text-lg text-[#72471c]/70 italic mb-2">
+                  <p className="text-lg text-orange-900/70 italic mb-2">
                     {chapters[selectedChapter - 1].subtitle}
                   </p>
-                  <div className="flex items-center gap-4 text-sm text-[#a59069]">
+                  <div className="flex items-center gap-4 text-sm text-orange-600">
                     <span className="flex items-center gap-1">
                       <BookOpen size={16} />
                       {chapters[selectedChapter - 1].verses} Verses
@@ -554,17 +554,17 @@ export default function HomePage() {
                 </div>
 
                 {/* Shloka Glimpse */}
-                <div className="mb-8 p-6 bg-white rounded-2xl border-2 border-[#a59069]/20 shadow-lg">
+                <div className="mb-8 p-6 bg-white rounded-2xl border-2 border-orange-200 shadow-lg">
                   <div className="flex items-start gap-3 mb-4">
-                    <Flame className="text-[#72471c] flex-shrink-0 mt-1" size={24} />
+                    <Flame className="text-orange-600 flex-shrink-0 mt-1" size={24} />
                     <div>
-                      <h4 className="text-sm font-semibold text-[#a59069] mb-2 uppercase tracking-wide">
+                      <h4 className="text-sm font-semibold text-orange-600 mb-2 uppercase tracking-wide">
                         Key Shloka
                       </h4>
-                      <p className="text-2xl md:text-3xl font-bold text-[#72471c] mb-3 leading-relaxed">
+                      <p className="text-2xl md:text-3xl font-bold text-orange-900 mb-3 leading-relaxed">
                         {chapters[selectedChapter - 1].glimpse}
                       </p>
-                      <p className="text-lg text-[#72471c]/80 italic leading-relaxed">
+                      <p className="text-lg text-orange-900/80 italic leading-relaxed">
                         "{chapters[selectedChapter - 1].translation}"
                       </p>
                     </div>
@@ -573,11 +573,11 @@ export default function HomePage() {
 
                 {/* Chapter Description */}
                 <div className="mb-8">
-                  <h4 className="text-xl font-bold text-[#72471c] mb-3 flex items-center gap-2">
+                  <h4 className="text-xl font-bold text-orange-900 mb-3 flex items-center gap-2">
                     <Sparkles size={20} />
                     Chapter Overview
                   </h4>
-                  <p className="text-lg text-[#72471c]/80 leading-relaxed">
+                  <p className="text-lg text-orange-900/80 leading-relaxed">
                     {chapters[selectedChapter - 1].description}
                   </p>
                 </div>
@@ -591,7 +591,7 @@ export default function HomePage() {
                     }}
                     whileHover={{
                       scale: 1.05,
-                      boxShadow: '0 20px 40px rgba(114, 71, 28, 0.3)',
+                      boxShadow: '0 20px 40px rgba(234, 88, 12, 0.3)',
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -602,9 +602,9 @@ export default function HomePage() {
               </motion.div>
 
               {/* Right Side - Chapter Grid Navigation */}
-              <div className="bg-gradient-to-br from-[#d4a574]/10 to-[#a59069]/10 p-8 md:p-12">
+              <div className="bg-gradient-to-br from-orange-100/50 to-red-100/50 p-8 md:p-12">
                 <div className="sticky top-8">
-                  <div className="bg-[#d4a574] text-white px-6 py-3 rounded-t-2xl text-center mb-6">
+                  <div className="bg-gradient-to-r from-orange-600 to-red-900 text-white px-6 py-3 rounded-t-2xl text-center mb-6">
                     <h4 className="text-xl font-bold">Chapter {selectedChapter}</h4>
                   </div>
                   
@@ -622,8 +622,8 @@ export default function HomePage() {
                         onClick={() => setSelectedChapter(chapter.number)}
                         className={`aspect-square rounded-xl font-bold text-lg transition-all duration-300 ${
                           selectedChapter === chapter.number
-                            ? 'bg-[#72471c] text-white shadow-lg scale-110'
-                            : 'bg-white text-[#72471c] hover:bg-[#a59069] hover:text-white shadow-md'
+                            ? 'bg-gradient-to-br from-orange-600 to-red-900 text-white shadow-lg scale-110'
+                            : 'bg-white text-orange-900 hover:bg-orange-500 hover:text-white shadow-md'
                         }`}
                         whileHover={{
                           scale: selectedChapter === chapter.number ? 1.1 : 1.05,
@@ -644,8 +644,8 @@ export default function HomePage() {
                         onClick={() => setSelectedChapter(chapter.number)}
                         className={`w-full text-left p-3 rounded-xl mb-2 transition-all duration-300 ${
                           selectedChapter === chapter.number
-                            ? 'bg-[#72471c] text-white shadow-md'
-                            : 'hover:bg-[#f5f1e8] text-[#72471c]'
+                            ? 'bg-gradient-to-r from-orange-600 to-red-900 text-white shadow-md'
+                            : 'hover:bg-orange-50 text-orange-900'
                         }`}
                         whileHover={{ x: 5 }}
                       >
@@ -672,7 +672,7 @@ export default function HomePage() {
 
       {/* Quote Section */}
       <section className="py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#72471c] to-[#a59069]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-500 to-red-900" />
         <div className="absolute inset-0 om-pattern opacity-5" />
         
         <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -682,14 +682,14 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="text-6xl mb-8 text-[#d4a574]">ॐ</div>
+            <div className="text-6xl mb-8 text-orange-100">ॐ</div>
             <blockquote className="text-3xl md:text-4xl font-light text-white mb-6 leading-relaxed">
               "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन"
             </blockquote>
-            <p className="text-xl md:text-2xl text-[#d4a574] font-light">
+            <p className="text-xl md:text-2xl text-orange-100 font-light">
               You have the right to perform your duty, but not to the fruits of your actions
             </p>
-            <p className="text-lg text-[#d4a574]/70 mt-6">
+            <p className="text-lg text-orange-100/70 mt-6">
               — Bhagavad Gita 2.47
             </p>
           </motion.div>
@@ -707,18 +707,18 @@ export default function HomePage() {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                className="text-center p-8 rounded-3xl bg-gradient-to-br from-[#f5f1e8] to-white border-2 border-[#a59069]/20"
+                className="text-center p-8 rounded-3xl bg-gradient-to-br from-orange-50 to-white border-2 border-orange-200 shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{
                   scale: 1.05,
-                  borderColor: '#72471c',
+                  borderColor: '#ea580c',
                 }}
               >
                 <motion.div
-                  className="text-6xl md:text-7xl font-bold text-[#72471c] mb-4"
+                  className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent mb-4"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -726,8 +726,8 @@ export default function HomePage() {
                 >
                   {stat.number}
                 </motion.div>
-                <h3 className="text-2xl font-bold text-[#a59069] mb-2">{stat.label}</h3>
-                <p className="text-xl text-[#72471c]/70">{stat.sublabel}</p>
+                <h3 className="text-2xl font-bold text-orange-600 mb-2">{stat.label}</h3>
+                <p className="text-xl text-orange-900/70">{stat.sublabel}</p>
               </motion.div>
             ))}
           </div>
@@ -735,7 +735,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-[#f5f1e8]">
+      <section className="py-24 px-6 bg-orange-50">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -743,21 +743,21 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-[#72471c] mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent mb-6">
               Begin Your Journey
             </h2>
-            <p className="text-xl text-[#a59069] mb-12 leading-relaxed">
+            <p className="text-xl text-orange-600 mb-12 leading-relaxed">
               Dive into the profound teachings of the Bhagavad Gita and discover wisdom that transcends time
             </p>
             <Link href="/chapters">
               <motion.button
                 className="px-12 py-5 rounded-full text-2xl font-semibold text-white shadow-2xl"
                 style={{
-                  background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                  background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                 }}
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: '0 20px 60px rgba(114, 71, 28, 0.4)',
+                  boxShadow: '0 20px 60px rgba(234, 88, 12, 0.4)',
                 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -775,15 +775,15 @@ export default function HomePage() {
           width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #f5f1e8;
+          background: #fff7ed;
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #a59069;
+          background: #ea580c;
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #72471c;
+          background: #dc2626;
         }
       `}</style>
     </div>

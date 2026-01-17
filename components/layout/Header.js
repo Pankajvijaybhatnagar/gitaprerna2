@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="sticky top-0 z-50 backdrop-blur-lg border-b border-[#a59069]/20"
+      className="sticky top-0 z-50 backdrop-blur-lg border-b border-orange-300/30 shadow-md"
       style={{
         background: 'rgba(255, 255, 255, 0.95)',
       }}
@@ -27,12 +27,12 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-4xl">ॐ</span>
+              <span className="text-4xl bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">ॐ</span>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold text-[#72471c]">
+                <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">
                   गीता प्रेरणा
                 </span>
-                <span className="text-xs text-[#a59069]">Gita Prerna</span>
+                <span className="text-xs text-orange-600">Gita Prerna</span>
               </div>
             </motion.div>
           </Link>
@@ -41,7 +41,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/">
               <motion.span
-                className="text-[#72471c] font-medium hover:text-[#a59069] transition-colors"
+                className="text-orange-900 font-medium hover:text-red-900 transition-colors cursor-pointer"
                 whileHover={{ y: -2 }}
               >
                 Home
@@ -49,7 +49,7 @@ export default function Header() {
             </Link>
             <Link href="/chapters">
               <motion.span
-                className="text-[#72471c] font-medium hover:text-[#a59069] transition-colors"
+                className="text-orange-900 font-medium hover:text-red-900 transition-colors cursor-pointer"
                 whileHover={{ y: -2 }}
               >
                 Chapters
@@ -57,7 +57,7 @@ export default function Header() {
             </Link>
             <Link href="/gallery">
               <motion.span
-                className="text-[#72471c] font-medium hover:text-[#a59069] transition-colors"
+                className="text-orange-900 font-medium hover:text-red-900 transition-colors cursor-pointer"
                 whileHover={{ y: -2 }}
               >
                 Gallery
@@ -65,7 +65,7 @@ export default function Header() {
             </Link>
             <Link href="/videos">
               <motion.span
-                className="text-[#72471c] font-medium hover:text-[#a59069] transition-colors"
+                className="text-orange-900 font-medium hover:text-red-900 transition-colors cursor-pointer"
                 whileHover={{ y: -2 }}
               >
                 Videos
@@ -73,7 +73,7 @@ export default function Header() {
             </Link>
             <Link href="/donation">
               <motion.span
-                className="text-[#72471c] font-medium hover:text-[#a59069] transition-colors"
+                className="text-orange-900 font-medium hover:text-red-900 transition-colors cursor-pointer"
                 whileHover={{ y: -2 }}
               >
                 Donation
@@ -81,9 +81,9 @@ export default function Header() {
             </Link>
             <Link href="/admin">
               <motion.button
-                className="px-6 py-2 rounded-full text-white font-semibold"
+                className="px-6 py-2 rounded-full text-white font-semibold shadow-lg"
                 style={{
-                  background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                  background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -95,7 +95,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#72471c]"
+            className="md:hidden text-orange-900"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -111,22 +111,22 @@ export default function Header() {
             exit={{ opacity: 0, height: 0 }}
           >
             <Link href="/" onClick={() => setIsMenuOpen(false)}>
-              <span className="block py-2 text-[#72471c] font-medium">Home</span>
+              <span className="block py-2 text-orange-900 font-medium hover:text-red-900 transition-colors">Home</span>
             </Link>
             <Link href="/chapters" onClick={() => setIsMenuOpen(false)}>
-              <span className="block py-2 text-[#72471c] font-medium">Chapters</span>
+              <span className="block py-2 text-orange-900 font-medium hover:text-red-900 transition-colors">Chapters</span>
             </Link>
             <Link href="/gallery" onClick={() => setIsMenuOpen(false)}>
-              <span className="block py-2 text-[#72471c] font-medium">Gallery</span>
+              <span className="block py-2 text-orange-900 font-medium hover:text-red-900 transition-colors">Gallery</span>
             </Link>
             <Link href="/videos" onClick={() => setIsMenuOpen(false)}>
-              <span className="block py-2 text-[#72471c] font-medium">Videos</span>
+              <span className="block py-2 text-orange-900 font-medium hover:text-red-900 transition-colors">Videos</span>
             </Link>
             <Link href="/donation" onClick={() => setIsMenuOpen(false)}>
-              <span className="block py-2 text-[#72471c] font-medium">Donation</span>
+              <span className="block py-2 text-orange-900 font-medium hover:text-red-900 transition-colors">Donation</span>
             </Link>
             <Link href="/admin" onClick={() => setIsMenuOpen(false)}>
-              <span className="block py-2 text-[#72471c] font-medium">Admin</span>
+              <span className="block py-2 text-orange-900 font-medium hover:text-red-900 transition-colors">Admin</span>
             </Link>
           </motion.nav>
         )}

@@ -23,7 +23,7 @@ export default function DonationPage() {
 
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#72471c] to-[#a59069]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-500 to-red-900" />
         <div className="absolute inset-0 om-pattern opacity-10" />
         
         <div className="relative z-10 max-w-7xl mx-auto text-center">
@@ -34,7 +34,7 @@ export default function DonationPage() {
             transition={{ duration: 0.8 }}
           >
             <motion.span
-              className="inline-block text-[#d4a574]"
+              className="inline-block text-orange-100"
               animate={{
                 scale: [1, 1.2, 1],
               }}
@@ -79,30 +79,30 @@ export default function DonationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="bg-gradient-to-br from-[#f5f1e8] to-white p-8 rounded-3xl border-2 border-[#a59069]/20">
+              <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-3xl border-2 border-orange-200 shadow-md">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#72471c] to-[#a59069] flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-600 to-red-900 flex items-center justify-center shadow-lg">
                     <CreditCard size={32} className="text-white" />
                   </div>
                   <div>
-                    <h2 className="text-3xl font-bold text-[#72471c]">UPI Payment</h2>
-                    <p className="text-[#a59069]">Quick and secure payment</p>
+                    <h2 className="text-3xl font-bold text-orange-900">UPI Payment</h2>
+                    <p className="text-orange-600">Quick and secure payment</p>
                   </div>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border-2 border-[#a59069]/20">
-                  <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                <div className="bg-white p-6 rounded-2xl border-2 border-orange-200">
+                  <label className="block text-sm font-semibold text-orange-900 mb-2">
                     UPI ID
                   </label>
                   <div className="flex items-center gap-3">
-                    <code className="flex-1 text-xl font-mono text-[#72471c] bg-[#f5f1e8] p-4 rounded-xl">
+                    <code className="flex-1 text-xl font-mono text-orange-900 bg-orange-50 p-4 rounded-xl">
                       {donationInfo.upiId}
                     </code>
                     <motion.button
                       onClick={() => copyToClipboard(donationInfo.upiId, 'upi')}
-                      className="px-6 py-4 rounded-xl font-semibold text-white flex items-center gap-2"
+                      className="px-6 py-4 rounded-xl font-semibold text-white flex items-center gap-2 shadow-lg"
                       style={{
-                        background: copied === 'upi' ? '#22c55e' : 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                        background: copied === 'upi' ? '#22c55e' : 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                       }}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -132,31 +132,31 @@ export default function DonationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="bg-gradient-to-br from-[#f5f1e8] to-white p-8 rounded-3xl border-2 border-[#a59069]/20">
+              <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-3xl border-2 border-orange-200 shadow-md">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#72471c] to-[#a59069] flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-600 to-red-900 flex items-center justify-center shadow-lg">
                     <Building size={32} className="text-white" />
                   </div>
                   <div>
-                    <h2 className="text-3xl font-bold text-[#72471c]">Bank Transfer</h2>
-                    <p className="text-[#a59069]">Direct bank account details</p>
+                    <h2 className="text-3xl font-bold text-orange-900">Bank Transfer</h2>
+                    <p className="text-orange-600">Direct bank account details</p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Account Number */}
                   {donationInfo.accountNumber && (
-                    <div className="bg-white p-6 rounded-2xl border-2 border-[#a59069]/20">
-                      <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                    <div className="bg-white p-6 rounded-2xl border-2 border-orange-200">
+                      <label className="block text-sm font-semibold text-orange-900 mb-2">
                         Account Number
                       </label>
                       <div className="flex items-center gap-2">
-                        <code className="flex-1 text-lg font-mono text-[#72471c] bg-[#f5f1e8] p-3 rounded-xl">
+                        <code className="flex-1 text-lg font-mono text-orange-900 bg-orange-50 p-3 rounded-xl">
                           {donationInfo.accountNumber}
                         </code>
                         <motion.button
                           onClick={() => copyToClipboard(donationInfo.accountNumber, 'account')}
-                          className="p-3 rounded-xl text-[#72471c] hover:bg-[#f5f1e8]"
+                          className="p-3 rounded-xl text-orange-900 hover:bg-orange-50"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                         >
@@ -168,17 +168,17 @@ export default function DonationPage() {
 
                   {/* IFSC Code */}
                   {donationInfo.ifscCode && (
-                    <div className="bg-white p-6 rounded-2xl border-2 border-[#a59069]/20">
-                      <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                    <div className="bg-white p-6 rounded-2xl border-2 border-orange-200">
+                      <label className="block text-sm font-semibold text-orange-900 mb-2">
                         IFSC Code
                       </label>
                       <div className="flex items-center gap-2">
-                        <code className="flex-1 text-lg font-mono text-[#72471c] bg-[#f5f1e8] p-3 rounded-xl">
+                        <code className="flex-1 text-lg font-mono text-orange-900 bg-orange-50 p-3 rounded-xl">
                           {donationInfo.ifscCode}
                         </code>
                         <motion.button
                           onClick={() => copyToClipboard(donationInfo.ifscCode, 'ifsc')}
-                          className="p-3 rounded-xl text-[#72471c] hover:bg-[#f5f1e8]"
+                          className="p-3 rounded-xl text-orange-900 hover:bg-orange-50"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                         >
@@ -190,11 +190,11 @@ export default function DonationPage() {
 
                   {/* Bank Name */}
                   {donationInfo.bankName && (
-                    <div className="bg-white p-6 rounded-2xl border-2 border-[#a59069]/20">
-                      <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                    <div className="bg-white p-6 rounded-2xl border-2 border-orange-200">
+                      <label className="block text-sm font-semibold text-orange-900 mb-2">
                         Bank Name
                       </label>
-                      <div className="text-lg text-[#72471c] bg-[#f5f1e8] p-3 rounded-xl">
+                      <div className="text-lg text-orange-900 bg-orange-50 p-3 rounded-xl">
                         {donationInfo.bankName}
                       </div>
                     </div>
@@ -202,11 +202,11 @@ export default function DonationPage() {
 
                   {/* Account Holder */}
                   {donationInfo.accountHolder && (
-                    <div className="bg-white p-6 rounded-2xl border-2 border-[#a59069]/20">
-                      <label className="block text-sm font-semibold text-[#72471c] mb-2">
+                    <div className="bg-white p-6 rounded-2xl border-2 border-orange-200">
+                      <label className="block text-sm font-semibold text-orange-900 mb-2">
                         Account Holder Name
                       </label>
-                      <div className="text-lg text-[#72471c] bg-[#f5f1e8] p-3 rounded-xl">
+                      <div className="text-lg text-orange-900 bg-orange-50 p-3 rounded-xl">
                         {donationInfo.accountHolder}
                       </div>
                     </div>
@@ -223,11 +223,11 @@ export default function DonationPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <Heart size={80} className="mx-auto mb-6 text-[#a59069]" />
-              <h3 className="text-3xl font-bold text-[#72471c] mb-4">
+              <Heart size={80} className="mx-auto mb-6 text-orange-400" />
+              <h3 className="text-3xl font-bold text-orange-900 mb-4">
                 Payment Details Coming Soon
               </h3>
-              <p className="text-xl text-[#a59069]">
+              <p className="text-xl text-orange-600">
                 Donation information will be available shortly
               </p>
             </motion.div>
@@ -236,7 +236,7 @@ export default function DonationPage() {
       </section>
 
       {/* Gratitude Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#72471c] to-[#a59069]">
+      <section className="py-20 px-6 bg-gradient-to-br from-orange-600 via-red-500 to-red-900">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -244,7 +244,7 @@ export default function DonationPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="text-7xl mb-8 text-[#d4a574]">ॐ</div>
+            <div className="text-7xl mb-8 text-orange-100">ॐ</div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
               धन्यवाद | Thank You
             </h2>

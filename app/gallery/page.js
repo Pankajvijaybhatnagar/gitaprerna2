@@ -17,12 +17,12 @@ export default function GalleryPage() {
 
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#72471c] to-[#a59069]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-500 to-red-900" />
         <div className="absolute inset-0 om-pattern opacity-10" />
         
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <motion.div
-            className="text-7xl mb-6 text-[#d4a574]"
+            className="text-7xl mb-6 text-orange-100"
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.8 }}
@@ -59,11 +59,11 @@ export default function GalleryPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <ImageIcon size={80} className="mx-auto mb-6 text-[#a59069]" />
-              <h3 className="text-3xl font-bold text-[#72471c] mb-4">
+              <ImageIcon size={80} className="mx-auto mb-6 text-orange-400" />
+              <h3 className="text-3xl font-bold text-orange-900 mb-4">
                 No Images Yet
               </h3>
-              <p className="text-xl text-[#a59069]">
+              <p className="text-xl text-orange-600">
                 Gallery images will appear here once added
               </p>
             </motion.div>
@@ -78,7 +78,7 @@ export default function GalleryPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   onClick={() => setSelectedImage(image)}
                 >
-                  <div className="relative overflow-hidden rounded-3xl border-2 border-[#a59069]/20 aspect-[4/3] bg-gradient-to-br from-[#f5f1e8] to-white">
+                  <div className="relative overflow-hidden rounded-3xl border-2 border-orange-200 aspect-[4/3] bg-gradient-to-br from-orange-50 to-white shadow-md hover:shadow-xl transition-shadow duration-300">
                     {image.imageUrl ? (
                       <img 
                         src={image.imageUrl} 
@@ -87,10 +87,10 @@ export default function GalleryPage() {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
-                        <ImageIcon size={64} className="text-[#a59069]" />
+                        <ImageIcon size={64} className="text-orange-400" />
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#72471c]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                         <h3 className="text-xl font-bold mb-1">{image.title}</h3>
                         {image.description && (
@@ -120,8 +120,8 @@ export default function GalleryPage() {
             animate={{ scale: 1, opacity: 1 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white rounded-3xl overflow-hidden">
-              <div className="relative aspect-video bg-[#f5f1e8]">
+            <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-video bg-orange-50">
                 {selectedImage.imageUrl && (
                   <img 
                     src={selectedImage.imageUrl} 
@@ -131,19 +131,19 @@ export default function GalleryPage() {
                 )}
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-[#72471c] mb-4">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent mb-4">
                   {selectedImage.title}
                 </h3>
                 {selectedImage.description && (
-                  <p className="text-lg text-[#a59069] leading-relaxed">
+                  <p className="text-lg text-orange-900 leading-relaxed">
                     {selectedImage.description}
                   </p>
                 )}
                 <motion.button
                   onClick={() => setSelectedImage(null)}
-                  className="mt-6 px-8 py-3 rounded-full font-semibold text-white"
+                  className="mt-6 px-8 py-3 rounded-full font-semibold text-white shadow-lg"
                   style={{
-                    background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                    background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                   }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

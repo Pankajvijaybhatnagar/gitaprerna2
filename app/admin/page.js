@@ -68,12 +68,12 @@ export default function AdminPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[#72471c] to-[#a59069]">
+      <section className="py-16 px-6 bg-gradient-to-br from-orange-600 via-red-500 to-red-900">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div>
               <motion.div
-                className="text-6xl mb-6 text-[#d4a574]"
+                className="text-6xl mb-6 text-orange-100"
                 initial={{ scale: 0, rotate: -180 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8 }}
@@ -102,7 +102,7 @@ export default function AdminPage() {
 
             <motion.button
               onClick={handleLogout}
-              className="px-6 py-3 rounded-full bg-white text-[#72471c] font-semibold flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-white text-orange-600 font-semibold flex items-center gap-2 shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -114,17 +114,17 @@ export default function AdminPage() {
       </section>
 
       {/* Tabs */}
-      <section className="py-8 px-6 bg-[#f5f1e8] border-b-2 border-[#a59069]/20 sticky top-0 z-40">
+      <section className="py-8 px-6 bg-orange-50 border-b-2 border-orange-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto">
           <div className="flex gap-4 overflow-x-auto">
             {tabs.map((tab) => (
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-full font-semibold flex items-center gap-2 whitespace-nowrap ${
+                className={`px-6 py-3 rounded-full font-semibold flex items-center gap-2 whitespace-nowrap shadow-md ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-[#72471c] to-[#a59069] text-white'
-                    : 'bg-white text-[#72471c] border-2 border-[#a59069]/20'
+                    ? 'bg-gradient-to-r from-orange-600 to-red-900 text-white'
+                    : 'bg-white text-orange-900 border-2 border-orange-300'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -177,23 +177,23 @@ export default function AdminPage() {
           onClick={() => setDeleteConfirm(null)}
         >
           <motion.div
-            className="bg-white rounded-3xl p-8 max-w-md w-full"
+            className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="text-center">
-              <AlertCircle size={64} className="mx-auto mb-4 text-red-600" />
-              <h3 className="text-2xl font-bold text-[#72471c] mb-4">
+              <AlertCircle size={64} className="mx-auto mb-4 text-red-900" />
+              <h3 className="text-2xl font-bold text-orange-900 mb-4">
                 Delete Chapter?
               </h3>
-              <p className="text-lg text-[#a59069] mb-8">
+              <p className="text-lg text-orange-600 mb-8">
                 Are you sure you want to delete this chapter? This action cannot be undone.
               </p>
               <div className="flex gap-4 justify-center">
                 <motion.button
                   onClick={() => setDeleteConfirm(null)}
-                  className="px-6 py-3 rounded-full font-semibold text-[#72471c] bg-white border-2 border-[#72471c]"
+                  className="px-6 py-3 rounded-full font-semibold text-orange-900 bg-white border-2 border-orange-600"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -201,8 +201,8 @@ export default function AdminPage() {
                 </motion.button>
                 <motion.button
                   onClick={() => handleDelete(deleteConfirm)}
-                  className="px-6 py-3 rounded-full font-semibold text-white bg-red-600"
-                  whileHover={{ scale: 1.05, backgroundColor: '#dc2626' }}
+                  className="px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-red-900 to-red-700 shadow-lg"
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Delete
@@ -223,11 +223,13 @@ function ChaptersTab({ chapters, onEdit, onDelete, onAdd, onReset }) {
   return (
     <div>
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold text-[#72471c]">Manage Chapters</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">
+          Manage Chapters
+        </h2>
         <div className="flex gap-4">
           <motion.button
             onClick={onReset}
-            className="px-6 py-3 rounded-full font-semibold text-[#72471c] bg-white border-2 border-[#72471c]"
+            className="px-6 py-3 rounded-full font-semibold text-orange-900 bg-white border-2 border-orange-600 shadow-md"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -235,9 +237,9 @@ function ChaptersTab({ chapters, onEdit, onDelete, onAdd, onReset }) {
           </motion.button>
           <motion.button
             onClick={onAdd}
-            className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2"
+            className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2 shadow-lg"
             style={{
-              background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+              background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -250,11 +252,11 @@ function ChaptersTab({ chapters, onEdit, onDelete, onAdd, onReset }) {
 
       {chapters.length === 0 ? (
         <div className="text-center py-20">
-          <BookOpen size={64} className="mx-auto mb-6 text-[#a59069]" />
-          <h3 className="text-3xl font-bold text-[#72471c] mb-4">
+          <BookOpen size={64} className="mx-auto mb-6 text-orange-400" />
+          <h3 className="text-3xl font-bold text-orange-900 mb-4">
             No Chapters Available
           </h3>
-          <p className="text-xl text-[#a59069]">
+          <p className="text-xl text-orange-600">
             Start by adding a new chapter
           </p>
         </div>
@@ -263,28 +265,28 @@ function ChaptersTab({ chapters, onEdit, onDelete, onAdd, onReset }) {
           {chapters.map((chapter) => (
             <motion.div
               key={chapter.id}
-              className="bg-gradient-to-br from-[#f5f1e8] to-white p-6 rounded-2xl border-2 border-[#a59069]/20"
-              whileHover={{ borderColor: '#72471c' }}
+              className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-2xl border-2 border-orange-200 shadow-md"
+              whileHover={{ borderColor: '#ea580c', shadow: 'lg' }}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-2">
-                    <span className="text-3xl font-bold text-[#72471c]">
+                    <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">
                       {chapter.id}
                     </span>
                     <div>
-                      <h3 className="text-xl font-bold text-[#72471c]">
+                      <h3 className="text-xl font-bold text-orange-900">
                         {chapter.titleHindi}
                       </h3>
-                      <h4 className="text-lg text-[#a59069]">
+                      <h4 className="text-lg text-orange-600">
                         {chapter.titleEnglish}
                       </h4>
                     </div>
                   </div>
-                  <p className="text-sm text-[#72471c]/70 line-clamp-2">
+                  <p className="text-sm text-orange-900/70 line-clamp-2">
                     {chapter.summaryEnglish}
                   </p>
-                  <div className="mt-2 text-sm font-semibold text-[#a59069]">
+                  <div className="mt-2 text-sm font-semibold text-orange-600">
                     {chapter.verses} Verses
                   </div>
                 </div>
@@ -292,8 +294,8 @@ function ChaptersTab({ chapters, onEdit, onDelete, onAdd, onReset }) {
                 <div className="flex gap-3">
                   <Link href={`/chapter/${chapter.id}`}>
                     <motion.button
-                      className="px-4 py-2 rounded-full bg-[#a59069] text-white font-semibold text-sm"
-                      whileHover={{ scale: 1.05, backgroundColor: '#72471c' }}
+                      className="px-4 py-2 rounded-full bg-orange-500 text-white font-semibold text-sm shadow-md"
+                      whileHover={{ scale: 1.05, backgroundColor: '#ea580c' }}
                       whileTap={{ scale: 0.95 }}
                     >
                       View
@@ -302,7 +304,7 @@ function ChaptersTab({ chapters, onEdit, onDelete, onAdd, onReset }) {
                   
                   <motion.button
                     onClick={() => onEdit(chapter)}
-                    className="px-4 py-2 rounded-full bg-[#72471c] text-white font-semibold text-sm flex items-center gap-2"
+                    className="px-4 py-2 rounded-full bg-gradient-to-r from-orange-600 to-red-900 text-white font-semibold text-sm flex items-center gap-2 shadow-md"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -312,7 +314,7 @@ function ChaptersTab({ chapters, onEdit, onDelete, onAdd, onReset }) {
                   
                   <motion.button
                     onClick={() => onDelete(chapter.id)}
-                    className="px-4 py-2 rounded-full bg-red-600 text-white font-semibold text-sm flex items-center gap-2"
+                    className="px-4 py-2 rounded-full bg-red-900 text-white font-semibold text-sm flex items-center gap-2 shadow-md"
                     whileHover={{ scale: 1.05, backgroundColor: '#dc2626' }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -353,12 +355,14 @@ function GalleryTab() {
   return (
     <div>
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold text-[#72471c]">Manage Gallery</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">
+          Manage Gallery
+        </h2>
         <motion.button
           onClick={() => setIsAdding(true)}
-          className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2"
+          className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2 shadow-lg"
           style={{
-            background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+            background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
           }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -370,24 +374,24 @@ function GalleryTab() {
 
       {isAdding && (
         <motion.div
-          className="mb-8 p-6 bg-gradient-to-br from-[#f5f1e8] to-white rounded-2xl border-2 border-[#a59069]/20"
+          className="mb-8 p-6 bg-gradient-to-br from-orange-50 to-white rounded-2xl border-2 border-orange-200 shadow-md"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h3 className="text-xl font-bold text-[#72471c] mb-4">Add New Image</h3>
+          <h3 className="text-xl font-bold text-orange-900 mb-4">Add New Image</h3>
           <div className="space-y-4">
             <input
               type="text"
               placeholder="Image Title"
               value={newImage.title}
               onChange={(e) => setNewImage({ ...newImage, title: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
             />
             <textarea
               placeholder="Description"
               value={newImage.description}
               onChange={(e) => setNewImage({ ...newImage, description: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none resize-none"
               rows="3"
             />
             <input
@@ -395,14 +399,14 @@ function GalleryTab() {
               placeholder="Image URL"
               value={newImage.imageUrl}
               onChange={(e) => setNewImage({ ...newImage, imageUrl: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
             />
             <div className="flex gap-4">
               <motion.button
                 onClick={handleAddImage}
-                className="px-6 py-3 rounded-full font-semibold text-white"
+                className="px-6 py-3 rounded-full font-semibold text-white shadow-lg"
                 style={{
-                  background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                  background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -411,7 +415,7 @@ function GalleryTab() {
               </motion.button>
               <motion.button
                 onClick={() => setIsAdding(false)}
-                className="px-6 py-3 rounded-full font-semibold text-[#72471c] border-2 border-[#72471c]"
+                className="px-6 py-3 rounded-full font-semibold text-orange-900 border-2 border-orange-600"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -426,22 +430,22 @@ function GalleryTab() {
         {images.map((image) => (
           <motion.div
             key={image.id}
-            className="bg-white rounded-2xl overflow-hidden border-2 border-[#a59069]/20"
+            className="bg-white rounded-2xl overflow-hidden border-2 border-orange-200 shadow-md"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="aspect-video bg-[#f5f1e8] flex items-center justify-center">
+            <div className="aspect-video bg-orange-50 flex items-center justify-center">
               {image.imageUrl ? (
                 <img src={image.imageUrl} alt={image.title} className="w-full h-full object-cover" />
               ) : (
-                <Image size={48} className="text-[#a59069]" />
+                <Image size={48} className="text-orange-400" />
               )}
             </div>
             <div className="p-4">
-              <h4 className="font-bold text-[#72471c] mb-2">{image.title}</h4>
-              <p className="text-sm text-[#a59069] mb-4">{image.description}</p>
+              <h4 className="font-bold text-orange-900 mb-2">{image.title}</h4>
+              <p className="text-sm text-orange-600 mb-4">{image.description}</p>
               <motion.button
                 onClick={() => deleteImage(image.id)}
-                className="w-full px-4 py-2 rounded-full bg-red-600 text-white font-semibold text-sm"
+                className="w-full px-4 py-2 rounded-full bg-red-900 text-white font-semibold text-sm shadow-md"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -479,12 +483,14 @@ function VideosTab() {
   return (
     <div>
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold text-[#72471c]">Manage Videos</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent">
+          Manage Videos
+        </h2>
         <motion.button
           onClick={() => setIsAdding(true)}
-          className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2"
+          className="px-6 py-3 rounded-full font-semibold text-white flex items-center gap-2 shadow-lg"
           style={{
-            background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+            background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
           }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -496,24 +502,24 @@ function VideosTab() {
 
       {isAdding && (
         <motion.div
-          className="mb-8 p-6 bg-gradient-to-br from-[#f5f1e8] to-white rounded-2xl border-2 border-[#a59069]/20"
+          className="mb-8 p-6 bg-gradient-to-br from-orange-50 to-white rounded-2xl border-2 border-orange-200 shadow-md"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h3 className="text-xl font-bold text-[#72471c] mb-4">Add New Video</h3>
+          <h3 className="text-xl font-bold text-orange-900 mb-4">Add New Video</h3>
           <div className="space-y-4">
             <input
               type="text"
               placeholder="Video Title"
               value={newVideo.title}
               onChange={(e) => setNewVideo({ ...newVideo, title: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
             />
             <textarea
               placeholder="Description"
               value={newVideo.description}
               onChange={(e) => setNewVideo({ ...newVideo, description: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none resize-none"
               rows="3"
             />
             <input
@@ -521,14 +527,14 @@ function VideosTab() {
               placeholder="YouTube URL (e.g., https://www.youtube.com/watch?v=VIDEO_ID)"
               value={newVideo.youtubeUrl}
               onChange={(e) => setNewVideo({ ...newVideo, youtubeUrl: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
             />
             <div className="flex gap-4">
               <motion.button
                 onClick={handleAddVideo}
-                className="px-6 py-3 rounded-full font-semibold text-white"
+                className="px-6 py-3 rounded-full font-semibold text-white shadow-lg"
                 style={{
-                  background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                  background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -537,7 +543,7 @@ function VideosTab() {
               </motion.button>
               <motion.button
                 onClick={() => setIsAdding(false)}
-                className="px-6 py-3 rounded-full font-semibold text-[#72471c] border-2 border-[#72471c]"
+                className="px-6 py-3 rounded-full font-semibold text-orange-900 border-2 border-orange-600"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -552,17 +558,17 @@ function VideosTab() {
         {videos.map((video) => (
           <motion.div
             key={video.id}
-            className="bg-gradient-to-br from-[#f5f1e8] to-white p-6 rounded-2xl border-2 border-[#a59069]/20"
-            whileHover={{ borderColor: '#72471c' }}
+            className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-2xl border-2 border-orange-200 shadow-md"
+            whileHover={{ borderColor: '#ea580c' }}
           >
-            <h4 className="font-bold text-[#72471c] mb-2">{video.title}</h4>
-            <p className="text-sm text-[#a59069] mb-4">{video.description}</p>
-            <div className="mb-4 text-sm font-mono text-[#72471c] bg-white p-2 rounded break-all">
+            <h4 className="font-bold text-orange-900 mb-2">{video.title}</h4>
+            <p className="text-sm text-orange-600 mb-4">{video.description}</p>
+            <div className="mb-4 text-sm font-mono text-orange-900 bg-white p-2 rounded break-all border border-orange-200">
               {video.youtubeUrl}
             </div>
             <motion.button
               onClick={() => deleteVideo(video.id)}
-              className="w-full px-4 py-2 rounded-full bg-red-600 text-white font-semibold"
+              className="w-full px-4 py-2 rounded-full bg-red-900 text-white font-semibold shadow-md"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -591,48 +597,50 @@ function DonationTab() {
   return (
     <div>
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-[#72471c] mb-2">Donation Settings</h2>
-        <p className="text-[#a59069]">Configure payment information for donations</p>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent mb-2">
+          Donation Settings
+        </h2>
+        <p className="text-orange-600">Configure payment information for donations</p>
       </div>
 
-      <div className="bg-gradient-to-br from-[#f5f1e8] to-white p-8 rounded-2xl border-2 border-[#a59069]/20">
+      <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border-2 border-orange-200 shadow-md">
         <div className="space-y-6">
           <div>
-            <label className="block text-sm font-semibold text-[#72471c] mb-2">
+            <label className="block text-sm font-semibold text-orange-900 mb-2">
               UPI ID
             </label>
             <input
               type="text"
               value={formData.upiId}
               onChange={(e) => setFormData({ ...formData, upiId: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
               placeholder="yourname@upi"
             />
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-semibold text-[#72471c] mb-2">
+              <label className="block text-sm font-semibold text-orange-900 mb-2">
                 Account Number
               </label>
               <input
                 type="text"
                 value={formData.accountNumber}
                 onChange={(e) => setFormData({ ...formData, accountNumber: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
                 placeholder="1234567890"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-[#72471c] mb-2">
+              <label className="block text-sm font-semibold text-orange-900 mb-2">
                 IFSC Code
               </label>
               <input
                 type="text"
                 value={formData.ifscCode}
                 onChange={(e) => setFormData({ ...formData, ifscCode: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
                 placeholder="ABCD0123456"
               />
             </div>
@@ -640,40 +648,40 @@ function DonationTab() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-semibold text-[#72471c] mb-2">
+              <label className="block text-sm font-semibold text-orange-900 mb-2">
                 Bank Name
               </label>
               <input
                 type="text"
                 value={formData.bankName}
                 onChange={(e) => setFormData({ ...formData, bankName: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
                 placeholder="Bank Name"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-[#72471c] mb-2">
+              <label className="block text-sm font-semibold text-orange-900 mb-2">
                 Account Holder Name
               </label>
               <input
                 type="text"
                 value={formData.accountHolder}
                 onChange={(e) => setFormData({ ...formData, accountHolder: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
                 placeholder="Full Name"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#72471c] mb-2">
+            <label className="block text-sm font-semibold text-orange-900 mb-2">
               Donation Message
             </label>
             <textarea
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none resize-none"
               rows="4"
               placeholder="Message to show on donation page"
             />
@@ -682,9 +690,9 @@ function DonationTab() {
           <div className="flex gap-4">
             <motion.button
               onClick={handleSave}
-              className="px-8 py-4 rounded-full font-semibold text-white"
+              className="px-8 py-4 rounded-full font-semibold text-white shadow-lg"
               style={{
-                background: saved ? '#22c55e' : 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+                background: saved ? '#22c55e' : 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -738,13 +746,15 @@ function SettingsTab() {
   return (
     <div>
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-[#72471c] mb-2">Admin Settings</h2>
-        <p className="text-[#a59069]">Update your admin credentials</p>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-900 bg-clip-text text-transparent mb-2">
+          Admin Settings
+        </h2>
+        <p className="text-orange-600">Update your admin credentials</p>
       </div>
 
-      <div className="bg-gradient-to-br from-[#f5f1e8] to-white p-8 rounded-2xl border-2 border-[#a59069]/20 max-w-2xl">
+      <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border-2 border-orange-200 max-w-2xl shadow-md">
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl text-red-600">
+          <div className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl text-red-900">
             {error}
           </div>
         )}
@@ -757,49 +767,49 @@ function SettingsTab() {
 
         <div className="space-y-6">
           <div>
-            <label className="block text-sm font-semibold text-[#72471c] mb-2">
+            <label className="block text-sm font-semibold text-orange-900 mb-2">
               New Username
             </label>
             <input
               type="text"
               value={newUsername}
               onChange={(e) => setNewUsername(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
               placeholder="Enter new username"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#72471c] mb-2">
+            <label className="block text-sm font-semibold text-orange-900 mb-2">
               New Password
             </label>
             <input
               type="password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
               placeholder="Enter new password"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#72471c] mb-2">
+            <label className="block text-sm font-semibold text-orange-900 mb-2">
               Confirm Password
             </label>
             <input
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border-2 border-[#a59069]/30 focus:border-[#72471c] outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-orange-300 focus:border-orange-600 focus:ring-2 focus:ring-orange-200 outline-none"
               placeholder="Confirm new password"
             />
           </div>
 
           <motion.button
             onClick={handleUpdateCredentials}
-            className="px-8 py-4 rounded-full font-semibold text-white"
+            className="px-8 py-4 rounded-full font-semibold text-white shadow-lg"
             style={{
-              background: 'linear-gradient(135deg, #72471c 0%, #a59069 100%)',
+              background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #DC2626 100%)',
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
